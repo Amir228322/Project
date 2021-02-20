@@ -14,8 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClick_opennings(View view) {
+    public void onClick_openings(View view) {
         Intent openings_intent = new Intent(this, opening_main_activity.class);
         startActivity(openings_intent);
+    }
+
+    public void onClick_practice(View view) {
+        Intent practice_intent = new Intent(this, opening_main_activity.class);
+        startActivity(practice_intent);
     }
 }
