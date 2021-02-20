@@ -11,6 +11,7 @@
         android:id="@+id/Opening_button"
         android:layout_width="205dp"
         android:layout_height="49dp"
+        android:onClick="onClick_opennings"
         android:text="Openings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
