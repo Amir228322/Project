@@ -54,18 +54,21 @@
                 android:id="@+id/queens_opening"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick_queens"
                 android:text="Queen's Gambit" />
 
             <Button
                 android:id="@+id/indian_opening"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick_indian"
                 android:text="Indian Defenses" />
 
             <Button
                 android:id="@+id/carokan_opening"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:onClick="onClick_carokan"
                 android:text="Caro-Kann Defense" />
         </LinearLayout>
     </ScrollView>

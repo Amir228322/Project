@@ -29,4 +29,19 @@ public class opening_main_activity extends AppCompatActivity {
         startActivity(sicilian_intent);
     }
 
+    public void onClick_queens(View view) {
+        Intent queens_intent = new Intent(this, queens_opening.class);
+        startActivity(queens_intent);
+    }
+
+    public void onClick_indian(View view) {
+        Intent indian_intent = new Intent(this, indian_opening.class);
+        startActivity(indian_intent);
+    }
+
+    public void onClick_carokan(View view) {
+        Intent carokan_intent = new Intent(this, carokan_opening.class);
+        startActivity(carokan_intent);
+    }
+
 }
