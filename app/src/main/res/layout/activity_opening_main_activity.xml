@@ -40,12 +40,14 @@
                 android:id="@+id/italian_opening"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick_italian"
                 android:text="Italian Game" />
 
             <Button
                 android:id="@+id/sicilian_opening"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick_sicilian"
                 android:text="Sicilian Defense" />
 
             <Button

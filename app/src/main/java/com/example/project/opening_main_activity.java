@@ -19,4 +19,14 @@ public class opening_main_activity extends AppCompatActivity {
         startActivity(openings_intent_back1);
     }
 
+    public void onClick_italian(View view) {
+        Intent italian_intent = new Intent(this, italian_opening.class);
+        startActivity(italian_intent);
+    }
+
+    public void onClick_sicilian(View view) {
+        Intent sicilian_intent = new Intent(this, sicilian_opening.class);
+        startActivity(sicilian_intent);
+    }
+
 }
