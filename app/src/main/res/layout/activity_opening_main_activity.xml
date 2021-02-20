@@ -19,4 +19,80 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="264dp"
+        android:layout_height="273dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/italian_opening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Italian Game" />
+
+            <Button
+                android:id="@+id/sicilian_opening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sicilian Defense" />
+
+            <Button
+                android:id="@+id/queens_opening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Queen's Gambit" />
+
+            <Button
+                android:id="@+id/indian_opening"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Indian Defenses" />
+
+            <Button
+                android:id="@+id/carokan_opening"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Caro-Kann Defense" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose opening that you want to learn"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-91"
+        android:text="@string/scroll"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
