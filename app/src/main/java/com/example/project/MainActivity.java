@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick_practice(View view) {
-        Intent practice_intent = new Intent(this, opening_main_activity.class);
+        Intent practice_intent = new Intent(this, Practice_Activity.class);
         startActivity(practice_intent);
     }
 }
