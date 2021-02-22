@@ -15,7 +15,7 @@ public class About_us extends AppCompatActivity {
     }
 
     public void onClick_about_back(View view) {
-        Intent about_intent = new Intent(this, About_us.class);
+        Intent about_intent = new Intent(this, MainActivity.class);
         startActivity(about_intent);
     }
 }
