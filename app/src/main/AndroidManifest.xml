@@ -16,7 +16,7 @@
         <activity android:name=".italian_opening" />
         <activity android:name=".Practice_Activity" />
         <activity android:name=".opening_main_activity" />
-        <activity android:name=".About_us"/>
+        <activity android:name=".About_us" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
