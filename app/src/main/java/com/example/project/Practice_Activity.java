@@ -11,10 +11,37 @@ public class Practice_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practice_);
+        setContentView(R.layout.activity_opening_main_activity);
     }
+
     public void onClick_opennings_back2(View view) {
         Intent openings_intent_back2 = new Intent(this, MainActivity.class);
         startActivity(openings_intent_back2);
     }
+
+    public void onClick_italian(View view) {
+        Intent italian_intent = new Intent(this, italian_opening.class);
+        startActivity(italian_intent);
+    }
+
+    public void onClick_sicilian(View view) {
+        Intent sicilian_intent = new Intent(this, sicilian_opening.class);
+        startActivity(sicilian_intent);
+    }
+
+    public void onClick_queens(View view) {
+        Intent queens_intent = new Intent(this, queens_opening.class);
+        startActivity(queens_intent);
+    }
+
+    public void onClick_indian(View view) {
+        Intent indian_intent = new Intent(this, indian_opening.class);
+        startActivity(indian_intent);
+    }
+
+    public void onClick_carokan(View view) {
+        Intent carokan_intent = new Intent(this, carokan_opening.class);
+        startActivity(carokan_intent);
+    }
+
 }
