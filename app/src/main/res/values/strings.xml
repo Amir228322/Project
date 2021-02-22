@@ -6,7 +6,10 @@
     <string name="about_the">About the</string>
     <string name="developers">Developers</string>
     <string name="back">Back</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
     <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
+    <string name="about_us">About Us</string>
+    <string name="practice">Practice</string>
+    <string name="openings">Openings</string>
 </resources>

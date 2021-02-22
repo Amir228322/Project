@@ -23,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
         Intent practice_intent = new Intent(this, Practice_Activity.class);
         startActivity(practice_intent);
     }
+    public void onClick_about(View view) {
+        Intent about_intent = new Intent(this, About_us.class);
+        startActivity(about_intent);
+    }
 }
