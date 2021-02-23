@@ -44,4 +44,5 @@ public class opening_main_activity extends AppCompatActivity {
         startActivity(carokan_intent);
     }
 
+
 }

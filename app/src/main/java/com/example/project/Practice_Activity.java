@@ -14,9 +14,9 @@ public class Practice_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_opening_main_activity);
     }
 
-    public void onClick_opennings_back2(View view) {
-        Intent openings_intent_back2 = new Intent(this, MainActivity.class);
-        startActivity(openings_intent_back2);
+    public void onClick_opennings_back1(View view) {
+        Intent openings_intent_back1 = new Intent(this, MainActivity.class);
+        startActivity(openings_intent_back1);
     }
 
     public void onClick_italian(View view) {
