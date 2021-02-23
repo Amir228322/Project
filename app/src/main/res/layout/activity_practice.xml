@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background_image"
-    tools:context=".opening_main_activity">
+    tools:context=".Practice_Activity">
 
     <Button
         android:id="@+id/back_opening_button_1"
@@ -75,7 +75,7 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Choose the opening you want to practice"
