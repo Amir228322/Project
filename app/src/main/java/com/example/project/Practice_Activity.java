@@ -11,7 +11,7 @@ public class Practice_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opening_main_activity);
+        setContentView(R.layout.activity_practice);
     }
 
     public void onClick_opennings_back1(View view) {
