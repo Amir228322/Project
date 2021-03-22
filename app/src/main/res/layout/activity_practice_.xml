@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background_image"
-    tools:context=".opening_main_activity">
+    tools:context=".activity_practice_">
 
     <Button
         android:id="@+id/back_opening_button_1"
@@ -56,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClick_queens"
-                android:text="Queen's Gambit" />
+                android:text="Queen's Gambit's" />
 
             <Button
                 android:id="@+id/indian_opening"
@@ -78,14 +78,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose the oppening you want to practice"
+        android:text="@string/choose_opening_that_you_want_to_practice"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        app:layout_constraintVertical_bias="0.274" />
 
     <TextView
         android:id="@+id/textView3"
@@ -106,6 +108,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="85dp" />
+        app:layout_constraintGuide_begin="99dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

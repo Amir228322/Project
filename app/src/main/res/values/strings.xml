@@ -12,4 +12,6 @@
     <string name="about_us">About Us</string>
     <string name="practice">Practice</string>
     <string name="openings">Openings</string>
+    <string name="choose_opening_that_you_want_to_learn">Choose opening that you want to learn</string>
+    <string name="choose_opening_that_you_want_to_practice">Choose opening that you want to practice</string>
 </resources>
