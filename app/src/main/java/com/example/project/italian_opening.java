@@ -52,6 +52,10 @@ public class italian_opening extends AppCompatActivity {
     ImageButton h5; ImageButton h6;
     ImageButton h7; ImageButton h8;
 
+    View button_next;
+    View button_var1;
+    View button_var2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +103,11 @@ public class italian_opening extends AppCompatActivity {
         h5 = (ImageButton)findViewById(R.id.h5); h6 = (ImageButton)findViewById(R.id.h6);
         h7 = (ImageButton)findViewById(R.id.h7); h8 = (ImageButton)findViewById(R.id.h8);
 
+        button_next = findViewById(R.id.next_button);
+        button_var1 = findViewById(R.id.var1);
+        button_var2 = findViewById(R.id.var2);
+        button_var1.setVisibility(View.GONE);
+        button_var2.setVisibility(View.GONE);
     }
 
     public void onClick_italian_back(View view) {
@@ -194,13 +203,9 @@ public class italian_opening extends AppCompatActivity {
                 f8.setForeground(getDrawable(R.drawable.piece_3));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("+0.50");
-                break;
-
-            case 13:
-                c4.setForeground(null);
-                b3.setForeground(getDrawable(R.drawable.piece_7));
-                count++;
-                ((TextView) findViewById(R.id.count_check)).setText("+0.12");
+                button_next.setVisibility(View.GONE);
+                button_var1.setVisibility(View.VISIBLE);
+                button_var2.setVisibility(View.VISIBLE);
                 break;
 
             case 14:
@@ -251,7 +256,76 @@ public class italian_opening extends AppCompatActivity {
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("+0.20");
                 break;
+
+            case 30:
+                a7.setForeground(null);
+                a5.setForeground(getDrawable(R.drawable.piece_1));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("+0.47");
+                break;
+
+            case 31:
+                h2.setForeground(null);
+                h3.setForeground(getDrawable(R.drawable.piece_2));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("+0.30");
+                break;
+
+            case 32:
+                c8.setForeground(null);
+                e6.setForeground(getDrawable(R.drawable.piece_8));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("+0.40");
+                break;
+
+            case 33:
+                c4.setForeground(null);
+                b5.setForeground(getDrawable(R.drawable.piece_7));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("+0.10");
+                break;
+
+            case 34:
+                d8.setForeground(null);
+                c8.setForeground(getDrawable(R.drawable.piece_9));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("+0.28");
+                break;
+
+            case 35:
+                g1.setForeground(null);
+                h2.setForeground(getDrawable(R.drawable.piece_11));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("0.0");
+                break;
+
+            case 36:
+                h7.setForeground(null);
+                h6.setForeground(getDrawable(R.drawable.piece_1));
+                count++;
+                ((TextView) findViewById(R.id.count_check)).setText("0.0");
+                break;
         }
+    }
+
+    public void onClick_1st(View view){
+        c4.setForeground(null);
+        b3.setForeground(getDrawable(R.drawable.piece_7));
+        count++;
+        ((TextView) findViewById(R.id.count_check)).setText("+0.12");
+        button_var1.setVisibility(View.GONE);
+        button_var2.setVisibility(View.GONE);
+        button_next.setVisibility(View.VISIBLE);
+    }
+
+    public void onClick_2st(View view){
+        b1.setForeground(null);
+        d2.setForeground(getDrawable(R.drawable.piece_6));
+        count = 30;
+        ((TextView) findViewById(R.id.count_check)).setText("+0.50");
+        button_var1.setVisibility(View.GONE);
+        button_var2.setVisibility(View.GONE);
+        button_next.setVisibility(View.VISIBLE);
     }
 
 }
