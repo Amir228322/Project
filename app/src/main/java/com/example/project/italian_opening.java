@@ -58,6 +58,10 @@ public class italian_opening extends AppCompatActivity {
     View button_next;
     View button_var1;
     View button_var2;
+    View button_previous;
+    View button_conclusion;
+
+    int count = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,8 +113,20 @@ public class italian_opening extends AppCompatActivity {
         button_next = findViewById(R.id.next_button);
         button_var1 = findViewById(R.id.var1);
         button_var2 = findViewById(R.id.var2);
+        button_previous = findViewById(R.id.previous_button);
+        button_conclusion = findViewById(R.id.conclusion_button);
+
         button_var1.setVisibility(View.GONE);
         button_var2.setVisibility(View.GONE);
+        button_previous.setVisibility(View.GONE);
+        button_next.setVisibility(View.VISIBLE);
+        button_conclusion.setVisibility(View.GONE);
+
+        ((TextView) findViewById(R.id.count_check)).setText("Score: \n 0.00");
+        ((TextView) findViewById(R.id.text_conclusion)).setText(
+                "Italian Opening is completed. You can test your knowledge in 'Practice' Section. \n " +
+                        "If not, there are other openings that can be interesting for you!");
+        ((TextView) findViewById(R.id.text_conclusion)).setVisibility(View.GONE);
 
         alertDialog_1();
     }
@@ -119,7 +135,7 @@ public class italian_opening extends AppCompatActivity {
         Intent italian_intent_back = new Intent(this, opening_main_activity.class);
         startActivity(italian_intent_back);
     }
-    int count = 1;
+
     public void onClick_italian_next(View view){
         switch(count){
             case 1:
@@ -127,6 +143,7 @@ public class italian_opening extends AppCompatActivity {
                 e4.setForeground(getDrawable(R.drawable.piece_2));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                button_previous.setVisibility(View.VISIBLE);
                 break;
 
             case 2:
@@ -259,9 +276,9 @@ public class italian_opening extends AppCompatActivity {
                 f6.setForeground(null);
                 h5.setForeground(getDrawable(R.drawable.piece_5));
                 count++;
-                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.20");
+                ((TextView) findViewById(R.id.count_check)).setVisibility(View.GONE);
                 button_next.setVisibility(View.GONE);
-                alertDialog_2();
+                button_conclusion.setVisibility(View.VISIBLE);
                 break;
 
             case 30:
@@ -310,9 +327,229 @@ public class italian_opening extends AppCompatActivity {
                 h7.setForeground(null);
                 h6.setForeground(getDrawable(R.drawable.piece_1));
                 count++;
-                ((TextView) findViewById(R.id.count_check)).setText("Score: \n 0.0");
+                ((TextView) findViewById(R.id.count_check)).setVisibility(View.GONE);
                 button_next.setVisibility(View.GONE);
-                alertDialog_3();
+                button_conclusion.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+
+    public void onClick_italian_previous(View view){
+        switch(count){
+            case 2:
+                e4.setForeground(null);
+                e2.setForeground(getDrawable(R.drawable.piece_2));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n 0.00");
+                button_previous.setVisibility(View.GONE);
+                break;
+
+            case 3:
+                e5.setForeground(null);
+                e7.setForeground(getDrawable(R.drawable.piece_1));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                break;
+
+            case 4:
+                f3.setForeground(null);
+                g1.setForeground(getDrawable(R.drawable.piece_6));
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.53");
+                count--;
+                break;
+
+            case 5:
+                c6.setForeground(null);
+                b8.setForeground(getDrawable(R.drawable.piece_5));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                break;
+
+            case 6:
+                c4.setForeground(null);
+                f1.setForeground(getDrawable(R.drawable.piece_7));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.46");
+                break;
+
+            case 7:
+                c5.setForeground(null);
+                f8.setForeground(getDrawable(R.drawable.piece_8));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.60");
+                break;
+
+            case 8:
+                c3.setForeground(null);
+                c2.setForeground(getDrawable(R.drawable.piece_2));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.57");
+                break;
+
+            case 9:
+                f6.setForeground(null);
+                g8.setForeground(getDrawable(R.drawable.piece_5));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.35");
+                break;
+
+            case 10:
+                d3.setForeground(null);
+                d2.setForeground(getDrawable(R.drawable.piece_2));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                break;
+
+            case 11:
+                d6.setForeground(null);
+                d7.setForeground(getDrawable(R.drawable.piece_1));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
+                break;
+
+            case 12:
+                g1.setForeground(null);
+                f1.setForeground(null);
+                e1.setForeground(getDrawable(R.drawable.piece_11));
+                h1.setForeground(getDrawable(R.drawable.piece_4));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.43");
+                break;
+
+            case 13:
+                g8.setForeground(null);
+                f8.setForeground(null);
+                e8.setForeground(getDrawable(R.drawable.piece_12));
+                h8.setForeground(getDrawable(R.drawable.piece_3));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.48");
+                button_next.setVisibility(View.VISIBLE);
+                button_var1.setVisibility(View.GONE);
+                button_var2.setVisibility(View.GONE);
+                break;
+
+            case 14:
+                b3.setForeground(null);
+                c4.setForeground(getDrawable(R.drawable.piece_7));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.50");
+                button_next.setVisibility(View.GONE);
+                button_var1.setVisibility(View.VISIBLE);
+                button_var2.setVisibility(View.VISIBLE);
+                break;
+
+            case 15:
+                h6.setForeground(null);
+                h7.setForeground(getDrawable(R.drawable.piece_1));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.12");
+                break;
+
+            case 16:
+                d2.setForeground(null);
+                b1.setForeground(getDrawable(R.drawable.piece_6));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
+                break;
+
+            case 17:
+                a6.setForeground(null);
+                a7.setForeground(getDrawable(R.drawable.piece_1));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
+                break;
+
+            case 18:
+                h3.setForeground(null);
+                h2.setForeground(getDrawable(R.drawable.piece_2));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.42");
+                break;
+
+            case 19:
+                a7.setForeground(null);
+                c5.setForeground(getDrawable(R.drawable.piece_8));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.33");
+                break;
+
+            case 20:
+                e1.setForeground(null);
+                f1.setForeground(getDrawable(R.drawable.piece_4));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.20");
+                break;
+
+            case 21:
+                h5.setForeground(null);
+                f6.setForeground(getDrawable(R.drawable.piece_5));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.35");
+                ((TextView) findViewById(R.id.count_check)).setVisibility(View.VISIBLE);
+                button_next.setVisibility(View.VISIBLE);
+                button_conclusion.setVisibility(View.GONE);
+                break;
+
+            case 30:
+                d2.setForeground(null);
+                b1.setForeground(getDrawable(R.drawable.piece_6));
+                count = 13;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.50");
+                button_next.setVisibility(View.GONE);
+                button_var1.setVisibility(View.VISIBLE);
+                button_var2.setVisibility(View.VISIBLE);
+                break;
+
+            case 31:
+                a5.setForeground(null);
+                a7.setForeground(getDrawable(R.drawable.piece_1));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.50");
+                break;
+
+            case 32:
+                h3.setForeground(null);
+                h2.setForeground(getDrawable(R.drawable.piece_2));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.47");
+                break;
+
+            case 33:
+                e6.setForeground(null);
+                c8.setForeground(getDrawable(R.drawable.piece_8));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
+                break;
+
+            case 34:
+                b5.setForeground(null);
+                c4.setForeground(getDrawable(R.drawable.piece_7));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                break;
+
+            case 35:
+                c8.setForeground(null);
+                d8.setForeground(getDrawable(R.drawable.piece_9));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.10");
+                break;
+
+            case 36:
+                h2.setForeground(null);
+                g1.setForeground(getDrawable(R.drawable.piece_11));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.28");
+                break;
+
+            case 37:
+                h6.setForeground(null);
+                h7.setForeground(getDrawable(R.drawable.piece_1));
+                count--;
+                ((TextView) findViewById(R.id.count_check)).setText("Score: \n 0.0");
+                ((TextView) findViewById(R.id.count_check)).setVisibility(View.VISIBLE);
+                button_next.setVisibility(View.VISIBLE);
+                button_conclusion.setVisibility(View.GONE);
                 break;
         }
     }
@@ -335,6 +572,11 @@ public class italian_opening extends AppCompatActivity {
         button_var1.setVisibility(View.GONE);
         button_var2.setVisibility(View.GONE);
         button_next.setVisibility(View.VISIBLE);
+    }
+
+    public void onClick_conclusion(View view){
+        if(count == 21){ alertDialog_2();}
+        if(count == 37){ alertDialog_3();}
     }
 
     private void alertDialog_1() {
@@ -366,6 +608,11 @@ public class italian_opening extends AppCompatActivity {
                     public void onClick(DialogInterface dialog,
                                         int which) {
                         Toast.makeText(getApplicationContext(),"Well Done!",Toast.LENGTH_LONG).show();
+                        button_next.setVisibility(View.GONE);
+                        button_previous.setVisibility(View.GONE);
+                        button_conclusion.setVisibility(View.GONE);
+                        ((TextView) findViewById(R.id.count_check)).setVisibility(View.GONE);
+                        ((TextView) findViewById(R.id.text_conclusion)).setVisibility(View.VISIBLE);
                     }
                 });
         AlertDialog alertDialog = dialog.create();
@@ -384,6 +631,11 @@ public class italian_opening extends AppCompatActivity {
                     public void onClick(DialogInterface dialog,
                                         int which) {
                         Toast.makeText(getApplicationContext(),"Well Done!",Toast.LENGTH_LONG).show();
+                        button_next.setVisibility(View.GONE);
+                        button_previous.setVisibility(View.GONE);
+                        button_conclusion.setVisibility(View.GONE);
+                        ((TextView) findViewById(R.id.count_check)).setVisibility(View.GONE);
+                        ((TextView) findViewById(R.id.text_conclusion)).setVisibility(View.VISIBLE);
                     }
                 });
         AlertDialog alertDialog = dialog.create();
