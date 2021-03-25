@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_background_image1"
+    android:background="#069A8E"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/Opening_button"
         android:layout_width="205dp"
         android:layout_height="49dp"
+        android:backgroundTint="#006993"
         android:onClick="onClick_openings"
         android:text="@string/openings"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,6 +24,7 @@
         android:id="@+id/Practice_button"
         android:layout_width="207dp"
         android:layout_height="48dp"
+        android:backgroundTint="#006993"
         android:onClick="onClick_practice"
         android:text="@string/practice"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +38,7 @@
         android:id="@+id/About_us_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#006993"
         android:onClick="onClick_about"
         android:text="@string/about_us"
         app:layout_constraintBottom_toBottomOf="parent"
