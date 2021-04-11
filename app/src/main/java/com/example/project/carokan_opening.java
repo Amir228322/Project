@@ -108,6 +108,12 @@ public class carokan_opening extends AppCompatActivity {
         alertDialog_1();
     }
 
+    protected void onDestroy(){
+        super.onDestroy();
+        Intent openings_intent_back1 = new Intent(this, MainActivity.class);
+        startActivity(openings_intent_back1);
+    }
+
     public void onClick_car_next(View view) {
         switch (count) {
             case 1:
