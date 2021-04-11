@@ -546,71 +546,71 @@ public class sicilian_opening extends AppCompatActivity {
             case 2:
                 e4.setForeground(null);
                 e2.setForeground(getDrawable(R.drawable.piece_2));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n 0.00");
                 break;
 
             case 3:
                 c5.setForeground(null);
                 c7.setForeground(getDrawable(R.drawable.piece_1));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.16");
                 break;
 
             case 4:
                 c3.setForeground(null);
                 b1.setForeground(getDrawable(R.drawable.piece_6));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.30");
                 break;
 
             case 5:
                 c6.setForeground(null);
                 b8.setForeground(getDrawable(R.drawable.piece_5));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.28");
                 break;
 
             case 6:
                 f4.setForeground(null);
                 f2.setForeground(getDrawable(R.drawable.piece_2));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.25");
                 break;
 
             case 7:
                 g6.setForeground(null);
                 g7.setForeground(getDrawable(R.drawable.piece_1));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.05");
                 break;
 
             case 8:
                 f3.setForeground(null);
                 g1.setForeground(getDrawable(R.drawable.piece_6));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n 0.00");
                 break;
 
             case 9:
                 g7.setForeground(null);
                 f8.setForeground(getDrawable(R.drawable.piece_8));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.08");
                 break;
 
             case 10:
                 c4.setForeground(null);
                 f1.setForeground(getDrawable(R.drawable.piece_7));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.02");
                 break;
 
             case 11:
                 e6.setForeground(null);
                 e7.setForeground(getDrawable(R.drawable.piece_1));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.40");
                 break;
 
             case 12:
@@ -618,57 +618,57 @@ public class sicilian_opening extends AppCompatActivity {
                 e1.setForeground(getDrawable(R.drawable.piece_11));
                 f1.setForeground(null);
                 h1.setForeground(getDrawable(R.drawable.piece_4));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.20");
                 break;
 
             case 13:
                 d6.setForeground(null);
                 d7.setForeground(getDrawable(R.drawable.piece_1));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.50");
                 break;
 
             case 14:
                 d3.setForeground(null);
                 d2.setForeground(getDrawable(R.drawable.piece_2));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.10");
                 break;
 
             case 15:
                 e7.setForeground(null);
                 g8.setForeground(getDrawable(R.drawable.piece_5));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.35");
                 break;
 
             case 16:
                 e1.setForeground(null);
                 d1.setForeground(getDrawable(R.drawable.piece_10));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.35");
                 break;
 
             case 17:
                 a6.setForeground(null);
                 a7.setForeground(getDrawable(R.drawable.piece_1));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.72");
                 break;
 
             case 18:
                 f5.setForeground(null);
                 f4.setForeground(getDrawable(R.drawable.piece_2));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.37");
                 break;
 
             case 19:
                 b5.setForeground(null);
                 b7.setForeground(getDrawable(R.drawable.piece_1));
-                count++;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                count--;
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n -0.42");
                 button_next.setVisibility(View.VISIBLE);
                 button_conclusion.setVisibility(View.GONE);
                 break;
@@ -677,35 +677,35 @@ public class sicilian_opening extends AppCompatActivity {
                 e4.setForeground(null);
                 e2.setForeground(getDrawable(R.drawable.piece_2));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score:\n 0.00");
                 break;
 
             case 32:
                 c5.setForeground(null);
                 c7.setForeground(getDrawable(R.drawable.piece_1));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.15");
                 break;
 
             case 33:
                 f3.setForeground(null);
                 g1.setForeground(getDrawable(R.drawable.piece_6));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.31");
                 break;
 
             case 34:
                 d6.setForeground(null);
                 d7.setForeground(getDrawable(R.drawable.piece_1));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.20");
                 break;
 
             case 35:
                 d4.setForeground(null);
                 d2.setForeground(getDrawable(R.drawable.piece_2));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.15");
                 break;
 
             case 36:
@@ -713,7 +713,7 @@ public class sicilian_opening extends AppCompatActivity {
                 d4.setForeground(getDrawable(R.drawable.piece_2));
                 c5.setForeground(getDrawable(R.drawable.piece_1));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.27");
                 break;
 
             case 37:
@@ -721,49 +721,49 @@ public class sicilian_opening extends AppCompatActivity {
                 d4.setForeground(getDrawable(R.drawable.piece_1));
                 f3.setForeground(getDrawable(R.drawable.piece_6));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.18");
                 break;
 
             case 38:
                 f6.setForeground(null);
                 g8.setForeground(getDrawable(R.drawable.piece_5));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.12");
                 break;
 
             case 39:
                 c3.setForeground(null);
                 b1.setForeground(getDrawable(R.drawable.piece_6));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ??");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.18");
                 break;
 
             case 40:
                 g6.setForeground(null);
                 g7.setForeground(getDrawable(R.drawable.piece_1));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ??");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.25");
                 break;
 
             case 41:
                 e3.setForeground(null);
                 c1.setForeground(getDrawable(R.drawable.piece_7));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.35");
                 break;
 
             case 42:
                 g7.setForeground(null);
                 f8.setForeground(getDrawable(R.drawable.piece_8));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ??");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.51");
                 break;
 
             case 43:
                 f3.setForeground(null);
                 f2.setForeground(getDrawable(R.drawable.piece_2));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.56");
                 break;
 
             case 44:
@@ -772,35 +772,35 @@ public class sicilian_opening extends AppCompatActivity {
                 e8.setForeground(getDrawable(R.drawable.piece_12));
                 h8.setForeground(getDrawable(R.drawable.piece_3));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.36");
                 break;
 
             case 45:
                 d2.setForeground(null);
                 d1.setForeground(getDrawable(R.drawable.piece_10));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.40");
                 break;
 
             case 46:
                 c6.setForeground(null);
                 b8.setForeground(getDrawable(R.drawable.piece_5));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ??");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.42");
                 break;
 
             case 47:
                 c4.setForeground(null);
                 f1.setForeground(getDrawable(R.drawable.piece_7));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.64");
                 break;
 
             case 48:
                 d7.setForeground(null);
                 c8.setForeground(getDrawable(R.drawable.piece_8));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.18");
                 break;
 
             case 49:
@@ -809,49 +809,49 @@ public class sicilian_opening extends AppCompatActivity {
                 e1.setForeground(getDrawable(R.drawable.piece_11));
                 a1.setForeground(getDrawable(R.drawable.piece_4));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ??");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.33");
                 break;
 
             case 50:
                 e5.setForeground(null);
                 c6.setForeground(getDrawable(R.drawable.piece_5));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.21");
                 break;
 
             case 51:
                 b3.setForeground(null);
                 c4.setForeground(getDrawable(R.drawable.piece_7));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.53");
                 break;
 
             case 52:
                 c8.setForeground(null);
                 a8.setForeground(getDrawable(R.drawable.piece_3));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.28");
                 break;
 
             case 53:
                 h4.setForeground(null);
                 h2.setForeground(getDrawable(R.drawable.piece_2));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ??");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.10");
                 break;
 
             case 54:
                 h5.setForeground(null);
                 h7.setForeground(getDrawable(R.drawable.piece_1));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.21");
                 break;
 
             case 55:
                 b1.setForeground(null);
                 c1.setForeground(getDrawable(R.drawable.piece_11));
                 count--;
-                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n ???");
+                ((TextView) findViewById(R.id.count_check_s)).setText("Score: \n +0.32");
                 button_next.setVisibility(View.VISIBLE);
                 button_conclusion.setVisibility(View.GONE);
                 break;
