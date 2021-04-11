@@ -21,7 +21,7 @@ public class Practice_Activity extends AppCompatActivity {
     }
 
     public void onClick_italian(View view) {
-        Intent italian_intent = new Intent(this, italian_opening.class);
+        Intent italian_intent = new Intent(this, italian_practice.class);
         startActivity(italian_intent);
     }
 
