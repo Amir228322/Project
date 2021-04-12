@@ -140,6 +140,7 @@ public class italian_opening extends AppCompatActivity {
                 e4.setForeground(getDrawable(R.drawable.piece_2));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                ((TextView) findViewById(R.id.moves_text)).setText("1. e2-e4");
                 button_previous.setVisibility(View.VISIBLE);
 
                 break;
@@ -149,7 +150,7 @@ public class italian_opening extends AppCompatActivity {
                 e5.setForeground(getDrawable(R.drawable.piece_1));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.53");
-
+                ((TextView) findViewById(R.id.moves_text)).setText("1. e2-e4  e7-e5");
                 break;
 
             case 3:
@@ -157,7 +158,7 @@ public class italian_opening extends AppCompatActivity {
                 f3.setForeground(getDrawable(R.drawable.piece_6));
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
                 count++;
-
+                ((TextView) findViewById(R.id.moves_text2)).setText("2. Ng1-Nf3");
                 break;
 
             case 4:
@@ -165,7 +166,7 @@ public class italian_opening extends AppCompatActivity {
                 c6.setForeground(getDrawable(R.drawable.piece_5));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.46");
-
+                ((TextView) findViewById(R.id.moves_text2)).setText("2. Ng1-Nf3  Nb8-Nc6");
                 break;
 
             case 5:
@@ -173,7 +174,7 @@ public class italian_opening extends AppCompatActivity {
                 c4.setForeground(getDrawable(R.drawable.piece_7));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.60");
-
+                ((TextView) findViewById(R.id.moves_text3)).setText("3. Bf1-Bc4");
                 break;
 
             case 6:
@@ -181,14 +182,14 @@ public class italian_opening extends AppCompatActivity {
                 c5.setForeground(getDrawable(R.drawable.piece_8));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.57");
-
+                ((TextView) findViewById(R.id.moves_text3)).setText("3. Bf1-Bc4  Bf8-Bc5");
                 break;
 
             case 7:
                 c2.setForeground(null);
                 c3.setForeground(getDrawable(R.drawable.piece_2));
                 count++;
-
+                ((TextView) findViewById(R.id.moves_text4)).setText("4. c2-c3");
                 break;
 
             case 8:
@@ -196,7 +197,7 @@ public class italian_opening extends AppCompatActivity {
                 f6.setForeground(getDrawable(R.drawable.piece_5));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
-
+                ((TextView) findViewById(R.id.moves_text4)).setText("4. c2-c3  Ng8-Nf6");
                 break;
 
             case 9:
@@ -204,7 +205,7 @@ public class italian_opening extends AppCompatActivity {
                 d3.setForeground(getDrawable(R.drawable.piece_2));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
-
+                ((TextView) findViewById(R.id.moves_text5)).setText("5. d2-d3");
                 break;
 
             case 10:
@@ -212,7 +213,7 @@ public class italian_opening extends AppCompatActivity {
                 d6.setForeground(getDrawable(R.drawable.piece_1));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.43");
-
+                ((TextView) findViewById(R.id.moves_text5)).setText("5. d2-d3  d7-d6");
                 break;
 
             case 11:
@@ -222,6 +223,7 @@ public class italian_opening extends AppCompatActivity {
                 f1.setForeground(getDrawable(R.drawable.piece_4));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.48");
+                ((TextView) findViewById(R.id.moves_text6)).setText("6. O-O");
                 break;
 
             case 12:
@@ -234,7 +236,7 @@ public class italian_opening extends AppCompatActivity {
                 button_next.setVisibility(View.GONE);
                 button_var1.setVisibility(View.VISIBLE);
                 button_var2.setVisibility(View.VISIBLE);
-
+                ((TextView) findViewById(R.id.moves_text6)).setText("6. O-O  O-O");
                 break;
 
             case 14:
@@ -242,7 +244,7 @@ public class italian_opening extends AppCompatActivity {
                 h6.setForeground(getDrawable(R.drawable.piece_1));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
-
+                ((TextView) findViewById(R.id.moves_text7)).setText("7. Bc4-Bb3  h7-h6");
                 break;
 
             case 15:
@@ -250,7 +252,7 @@ public class italian_opening extends AppCompatActivity {
                 d2.setForeground(getDrawable(R.drawable.piece_6));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
-
+                ((TextView) findViewById(R.id.moves_text8)).setText("8. Nb1-Nd2");
                 break;
 
             case 16:
@@ -258,7 +260,7 @@ public class italian_opening extends AppCompatActivity {
                 a6.setForeground(getDrawable(R.drawable.piece_1));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.42");
-
+                ((TextView) findViewById(R.id.moves_text8)).setText("8. Nb1-Nd2  a7-a6");
                 break;
 
             case 17:
@@ -266,7 +268,7 @@ public class italian_opening extends AppCompatActivity {
                 h3.setForeground(getDrawable(R.drawable.piece_2));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.33");
-
+                ((TextView) findViewById(R.id.moves_text9)).setText("9. h2-h3");
                 break;
 
             case 18:
@@ -274,7 +276,7 @@ public class italian_opening extends AppCompatActivity {
                 a7.setForeground(getDrawable(R.drawable.piece_8));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.20");
-
+                ((TextView) findViewById(R.id.moves_text9)).setText("9. h2-h3  Bc5-Ba7");
                 break;
 
             case 19:
@@ -282,14 +284,14 @@ public class italian_opening extends AppCompatActivity {
                 e1.setForeground(getDrawable(R.drawable.piece_4));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.35");
-
+                ((TextView) findViewById(R.id.moves_text10)).setText("10. Rf1-Re1");
                 break;
 
             case 20:
                 f6.setForeground(null);
                 h5.setForeground(getDrawable(R.drawable.piece_5));
                 count++;
-
+                ((TextView) findViewById(R.id.moves_text10)).setText("10. Rf1-Re1  Nf6-Nh5");
                 ((TextView) findViewById(R.id.count_check)).setVisibility(View.GONE);
                 button_next.setVisibility(View.GONE);
                 button_conclusion.setVisibility(View.VISIBLE);
@@ -300,6 +302,7 @@ public class italian_opening extends AppCompatActivity {
                 a5.setForeground(getDrawable(R.drawable.piece_1));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.47");
+                ((TextView) findViewById(R.id.moves_text7)).setText("7. Nb1-Nd2  a7-a5");
                 break;
 
             case 31:
@@ -307,6 +310,7 @@ public class italian_opening extends AppCompatActivity {
                 h3.setForeground(getDrawable(R.drawable.piece_2));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.30");
+                ((TextView) findViewById(R.id.moves_text8)).setText("8. h2-h3");
                 break;
 
             case 32:
@@ -314,6 +318,7 @@ public class italian_opening extends AppCompatActivity {
                 e6.setForeground(getDrawable(R.drawable.piece_8));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.40");
+                ((TextView) findViewById(R.id.moves_text8)).setText("8. h2-h3  Bc8-Be6");
                 break;
 
             case 33:
@@ -321,6 +326,7 @@ public class italian_opening extends AppCompatActivity {
                 b5.setForeground(getDrawable(R.drawable.piece_7));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.10");
+                ((TextView) findViewById(R.id.moves_text9)).setText("9. Bc4-Bb5");
                 break;
 
             case 34:
@@ -328,6 +334,7 @@ public class italian_opening extends AppCompatActivity {
                 c8.setForeground(getDrawable(R.drawable.piece_9));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.28");
+                ((TextView) findViewById(R.id.moves_text9)).setText("9. Bc4-Bb5  Qd8-Qc8");
                 break;
 
             case 35:
@@ -335,6 +342,7 @@ public class italian_opening extends AppCompatActivity {
                 h2.setForeground(getDrawable(R.drawable.piece_11));
                 count++;
                 ((TextView) findViewById(R.id.count_check)).setText("Score: \n 0.0");
+                ((TextView) findViewById(R.id.moves_text10)).setText("10. Kg1-Kh2");
                 break;
 
             case 36:
@@ -344,6 +352,7 @@ public class italian_opening extends AppCompatActivity {
                 ((TextView) findViewById(R.id.count_check)).setVisibility(View.GONE);
                 button_next.setVisibility(View.GONE);
                 button_conclusion.setVisibility(View.VISIBLE);
+                ((TextView) findViewById(R.id.moves_text10)).setText("10. Kg1-Kh2  h7-h6");
                 break;
         }
     }
@@ -615,7 +624,7 @@ public class italian_opening extends AppCompatActivity {
         b3.setForeground(getDrawable(R.drawable.piece_7));
         count++;
         ((TextView) findViewById(R.id.count_check)).setText("Score: \n +0.12");
-
+        ((TextView) findViewById(R.id.moves_text7)).setText("7. Bc4-Bb3");
         button_var1.setVisibility(View.GONE);
         button_var2.setVisibility(View.GONE);
         button_next.setVisibility(View.VISIBLE);
@@ -629,12 +638,22 @@ public class italian_opening extends AppCompatActivity {
         button_var1.setVisibility(View.GONE);
         button_var2.setVisibility(View.GONE);
         button_next.setVisibility(View.VISIBLE);
-
+        ((TextView) findViewById(R.id.moves_text7)).setText("7. Nb1-Nd2");
     }
 
     public void onClick_conclusion(View view){
         if(count == 21){ alertDialog_2();}
         if(count == 37){ alertDialog_3();}
+        ((TextView) findViewById(R.id.moves_text)).setText("");
+        ((TextView) findViewById(R.id.moves_text2)).setText("");
+        ((TextView) findViewById(R.id.moves_text3)).setText("");
+        ((TextView) findViewById(R.id.moves_text4)).setText("");
+        ((TextView) findViewById(R.id.moves_text5)).setText("");
+        ((TextView) findViewById(R.id.moves_text6)).setText("");
+        ((TextView) findViewById(R.id.moves_text7)).setText("");
+        ((TextView) findViewById(R.id.moves_text8)).setText("");
+        ((TextView) findViewById(R.id.moves_text9)).setText("");
+        ((TextView) findViewById(R.id.moves_text10)).setText("");
     }
 
     private void alertDialog_1() {

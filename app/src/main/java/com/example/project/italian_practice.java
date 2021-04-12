@@ -11,6 +11,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +25,10 @@ public class italian_practice extends AppCompatActivity {
     int correct_moves[] = new int[64];
     int pawns[] = new int[8];
     int count = 0;
+
     ImageButton buttons[] = new ImageButton[64];
+    ImageView imageView1;
+    ImageView imageView2;
 
     boolean pawn_active = false;
     boolean rook_active = false;
@@ -108,6 +112,11 @@ public class italian_practice extends AppCompatActivity {
         buttons[58] = (ImageButton)findViewById(R.id.h3); buttons[59] = (ImageButton)findViewById(R.id.h4);
         buttons[60] = (ImageButton)findViewById(R.id.h5); buttons[61] = (ImageButton)findViewById(R.id.h6);
         buttons[62] = (ImageButton)findViewById(R.id.h7); buttons[63] = (ImageButton)findViewById(R.id.h8);
+
+        imageView1 = (ImageView) findViewById(R.id.think);
+        imageView1.setVisibility(View.VISIBLE);
+        imageView2 = (ImageView) findViewById(R.id.concl);
+        imageView2.setVisibility(View.GONE);
     }
     public void undoforall(int place) {
         if(field[place] == 1) {
@@ -1688,6 +1697,8 @@ public class italian_practice extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int which) {
+                        imageView2.setVisibility(View.VISIBLE);
+                        imageView1.setVisibility(View.GONE);
                         Toast.makeText(getApplicationContext(),"GREAT JOB!!!",Toast.LENGTH_LONG).show();
                     }
                 });
