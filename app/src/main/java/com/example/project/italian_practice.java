@@ -1,11 +1,17 @@
 package com.example.project;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class italian_practice extends AppCompatActivity {
     int pawn_move;
@@ -14,9 +20,9 @@ public class italian_practice extends AppCompatActivity {
     int queen_move;
     int knight_move;
     int king_move;
-    int count = 0;
     int correct_moves[] = new int[64];
     int pawns[] = new int[8];
+    int count = 0;
     ImageButton buttons[] = new ImageButton[64];
 
     boolean pawn_active = false;
@@ -38,13 +44,21 @@ public class italian_practice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_italian_practice);
         getSupportActionBar().hide();
+        alertDialog_2();
         for(int i = 0; i <= 63; i++){
             field[i] = 7;
         }
         for(int i = 0; i < 8; i++){
             pawns[i] = 0;
         }
+
         correct_moves[0] = 35;  correct_moves[1] = 42;  correct_moves[2] = 19;
+        correct_moves[3] = 18;  correct_moves[4] = 26;  correct_moves[5] = 48;
+        correct_moves[6] = 10;  correct_moves[7] = 58;  correct_moves[8] = 12;
+        correct_moves[9] = 19;  correct_moves[10] = 19;  correct_moves[11] = 19;
+        correct_moves[12] = 19;  correct_moves[13] = 19;  correct_moves[14] = 19;
+        correct_moves[26] = 25;  correct_moves[27] = 19;  correct_moves[28] = 19;
+
 
         field[0] = 5;   field[1] = 1;   field[8] = 2;   field[9] = 1;
         field[16] = 3;  field[17] = 1;  field[24] = 4;  field[25] = 1;
@@ -100,33 +114,40 @@ public class italian_practice extends AppCompatActivity {
             field[place] = 7;
             buttons[pawn_move].setForeground(getDrawable(R.drawable.piece_2));
             buttons[place].setForeground(null);
+            count --;
         } else if (field[place] == 2) {
             field[knight_move] = 2;
             field[place] = 7;
             buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
             buttons[place].setForeground(null);
+            count--;
         } else if (field[place] == 3) {
             field[bishop_move] = 3;
             field[place] = 7;
             buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
             buttons[place].setForeground(null);
+            count--;
         } else if (field[place] == 4) {
             field[queen_move] = 4;
             field[place] = 7;
             buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
             buttons[place].setForeground(null);
+            count--;
         } else if (field[place] == 5) {
             field[rook_move] = 5;
             field[place] = 7;
             buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
             buttons[place].setForeground(null);
+            count--;
         } else if (field[place] == 6) {
             field[king_move] = 6;
             field[place] = 7;
             buttons[king_move].setForeground(getDrawable(R.drawable.piece_6));
             buttons[place].setForeground(null);
+            count--;
         }
     }
+
     public void pawnMove(int place){
         pawn_move = place;
         place += 1;
@@ -914,14 +935,10 @@ public class italian_practice extends AppCompatActivity {
                         field[i] = 7;
                     }
                 }
-                if (field[place - 1] == 1) {
-                    buttons[place - 1].setForeground(null);
-                    field[place - 1] = 7;
-                } else if (field[place - 2] == 1) {
-                    buttons[place - 2].setForeground(null);
-                    field[place - 2] = 7;
-                }
+                buttons[pawn_move].setForeground(null);
+                field[pawn_move] = 7;
                 pawn_active = false;
+                count++;
             }
             if (knight_active == true) {
                 buttons[place].setForeground(getDrawable(R.drawable.piece_6));
@@ -935,6 +952,7 @@ public class italian_practice extends AppCompatActivity {
                 buttons[knight_move].setForeground(null);
                 field[knight_move] = 7;
                 knight_active = false;
+                count++;
             }
             if (bishop_active == true) {
                 buttons[place].setForeground(getDrawable(R.drawable.piece_7));
@@ -949,6 +967,7 @@ public class italian_practice extends AppCompatActivity {
                 buttons[bishop_move].setForeground(null);
                 field[bishop_move] = 7;
                 bishop_active = false;
+                count++;
             }
             if (queen_active == true) {
                 buttons[place].setForeground(getDrawable(R.drawable.piece_10));
@@ -962,6 +981,7 @@ public class italian_practice extends AppCompatActivity {
                 buttons[queen_move].setForeground(null);
                 field[queen_move] = 7;
                 queen_active = false;
+                count++;
             }
             if (rook_active == true) {
                 buttons[place].setForeground(getDrawable(R.drawable.piece_4));
@@ -975,6 +995,7 @@ public class italian_practice extends AppCompatActivity {
                 buttons[rook_move].setForeground(null);
                 field[rook_move] = 7;
                 rook_active = false;
+                count++;
             }
             if (king_active == true) {
                 buttons[place].setForeground(getDrawable(R.drawable.piece_11));
@@ -994,39 +1015,340 @@ public class italian_practice extends AppCompatActivity {
                 buttons[king_move].setForeground(null);
                 field[king_move] = 7;
                 king_active = false;
+                count++;
             }
+
             switch (count) {
-                case 0:
-                    if (place == correct_moves[count]) {
+                case 1:
+                    if (place == correct_moves[0]) {
                         if (field[place] == 1) {
-                            count++;
-                        } else if (field[place] == 2) {
+                            buttons[38].setForeground(null);
+                            buttons[36].setForeground(getDrawable(R.drawable.piece_1));
+                            field[38] = 7;
+                            field[36] = 8;
+                        } else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
                             buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
                             buttons[place].setForeground(null);
-                        } else if (field[place] == 3) {
+                        }else if(field[place] == 3){
                             field[bishop_move] = 3;
                             field[place] = 7;
                             buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
                             buttons[place].setForeground(null);
-                        } else if (field[place] == 4) {
+                        }else if (field[place] == 4){
                             field[queen_move] = 4;
                             field[place] = 7;
                             buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
                             buttons[place].setForeground(null);
-                        } else if (field[place] == 5) {
+                        }else if (field[place] == 5){
                             field[rook_move] = 5;
                             field[place] = 7;
                             buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
                             buttons[place].setForeground(null);
-                        } else if (field[place] == 6) {
+                        }else if(field[place] == 6){
                             field[king_move] = 6;
                             field[place] = 7;
                             buttons[king_move].setForeground(getDrawable(R.drawable.piece_6));
                             buttons[place].setForeground(null);
                         }
-                    } else undoforall(place);
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 2:
+                    if (place == correct_moves[1]) {
+                        if (field[place] == 2) {
+                            buttons[15].setForeground(null);
+                            buttons[21].setForeground(getDrawable(R.drawable.piece_5));
+                            field[15] = 7;
+                            field[21] = 8;
+                        }else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 3){
+                            field[bishop_move] = 3;
+                            field[place] = 7;
+                            buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_11));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 3:
+                    if (place == correct_moves[2]) {
+                        if (field[place] == 3) {
+                            buttons[47].setForeground(null);
+                            buttons[20].setForeground(getDrawable(R.drawable.piece_8));
+                            field[47] = 7;
+                            field[19] = 8;
+                        } else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 4:
+                    if (place == correct_moves[3]) {
+                        if (field[place] == 1) {
+                            buttons[55].setForeground(null);
+                            buttons[45].setForeground(getDrawable(R.drawable.piece_5));
+                            field[55] = 7;
+                            field[45] = 8;
+                        }else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 3){
+                            field[bishop_move] = 3;
+                            field[place] = 7;
+                            buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_11));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 5:
+                    if (place == correct_moves[4]) {
+                        if (field[place] == 1) {
+                            buttons[30].setForeground(null);
+                            buttons[29].setForeground(getDrawable(R.drawable.piece_1));
+                            field[30] = 7;
+                            field[29] = 8;
+                        } else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 3){
+                            field[bishop_move] = 3;
+                            field[place] = 7;
+                            buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 6:
+                    if (place == correct_moves[5]) {
+                        if (field[place] == 6) {
+                            buttons[39].setForeground(null);
+                            buttons[55].setForeground(getDrawable(R.drawable.piece_12));
+                            buttons[63].setForeground(null);
+                            buttons[47].setForeground(getDrawable(R.drawable.piece_3));
+                            field[39] = 7;
+                            field[55] = 8;
+                            field[63] = 7;
+                            field[47] = 8;
+                        }else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 3){
+                            field[bishop_move] = 3;
+                            field[place] = 7;
+                            buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_11));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 7:
+                    if (place == correct_moves[6] || place == correct_moves[26]) {
+                        if (field[place] == 2) {
+                            buttons[6].setForeground(null);
+                            buttons[4].setForeground(getDrawable(R.drawable.piece_1));
+                            field[6] = 7;
+                            field[4] = 8;
+                        } else if (field[place] == 3) {
+                            buttons[62].setForeground(null);
+                            buttons[61].setForeground(getDrawable(R.drawable.piece_1));
+                            field[62] = 7;
+                            field[61] = 8;
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 8:
+                    if (place == correct_moves[7]) {
+                        if (field[place] == 1) {
+                            buttons[23].setForeground(null);
+                            buttons[37].setForeground(getDrawable(R.drawable.piece_8));
+                            field[23] = 7;
+                            field[37] = 8;
+                        } else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 3){
+                            field[bishop_move] = 3;
+                            field[place] = 7;
+                            buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
+
+                case 9:
+                    if (place == correct_moves[8]) {
+                        if (field[place] == 3) {
+                            buttons[31].setForeground(null);
+                            buttons[23].setForeground(getDrawable(R.drawable.piece_9));
+                            field[31] = 7;
+                            field[23] = 8;
+                        } else if(field[place] == 2) {
+                            field[knight_move] = 2;
+                            field[place] = 7;
+                            buttons[knight_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 3){
+                            field[bishop_move] = 3;
+                            field[place] = 7;
+                            buttons[bishop_move].setForeground(getDrawable(R.drawable.piece_7));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 4){
+                            field[queen_move] = 4;
+                            field[place] = 7;
+                            buttons[queen_move].setForeground(getDrawable(R.drawable.piece_10));
+                            buttons[place].setForeground(null);
+                        }else if (field[place] == 5){
+                            field[rook_move] = 5;
+                            field[place] = 7;
+                            buttons[rook_move].setForeground(getDrawable(R.drawable.piece_4));
+                            buttons[place].setForeground(null);
+                        }else if(field[place] == 6){
+                            field[king_move] = 6;
+                            field[place] = 7;
+                            buttons[king_move].setForeground(getDrawable(R.drawable.piece_6));
+                            buttons[place].setForeground(null);
+                        }
+                    } else {
+                        undoforall(place);
+                        alertDialog_1();
+                    }
+                    break;
             }
         }
     }
@@ -1254,5 +1576,41 @@ public class italian_practice extends AppCompatActivity {
     public void onCLick_Italian_Practice_h7(View view) {
         int i = Integer.parseInt((String) buttons[62].getTag());
         getPlace(i);
+    }
+
+    private void alertDialog_1() {
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setMessage("This move is not correct!!!");
+        dialog.setTitle("Warning!");
+        dialog.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        Toast.makeText(getApplicationContext(),"Try again!",Toast.LENGTH_LONG).show();
+                    }
+                });
+        AlertDialog alertDialog = dialog.create();
+        alertDialog.show();
+    }
+
+    private void alertDialog_2() {
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setMessage("Here you can use interactive board to test your knowledge of opening\n\n" +
+                "If your move is not correct, you will have a chance to try again, so don't worry!");
+        dialog.setTitle("Practice: Italian Opening");
+        dialog.setPositiveButton("OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        Toast.makeText(getApplicationContext(),"Try again!",Toast.LENGTH_LONG).show();
+                    }
+                });
+        AlertDialog alertDialog = dialog.create();
+        alertDialog.show();
+    }
+
+    public void onClick_pr_italian_back(View view) {
+        Intent italian_intent_back = new Intent(this, Practice_Activity.class);
+        startActivity(italian_intent_back);
     }
 }

@@ -4,7 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#069A8E"
     tools:context=".italian_practice">
+
+    <Button
+        android:id="@+id/back_pr_italian"
+        android:layout_width="90dp"
+        android:layout_height="36dp"
+        android:backgroundTint="#006993"
+        android:onClick="onClick_pr_italian_back"
+        android:text="Back"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/chess_board"
@@ -592,13 +608,4 @@
             app:srcCompat="@drawable/blacl_cell" />
     </androidx.gridlayout.widget.GridLayout>
 
-    <TextView
-        android:id="@+id/testtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chess_board" />
 </androidx.constraintlayout.widget.ConstraintLayout>
