@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
@@ -1022,10 +1023,16 @@ public class italian_practice extends AppCompatActivity {
                 case 1:
                     if (place == correct_moves[0]) {
                         if (field[place] == 1) {
-                            buttons[38].setForeground(null);
-                            buttons[36].setForeground(getDrawable(R.drawable.piece_1));
-                            field[38] = 7;
-                            field[36] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[38].setForeground(null);
+                                    buttons[36].setForeground(getDrawable(R.drawable.piece_1));
+                                    field[38] = 7;
+                                    field[36] = 8;
+                                }
+                            }.start();
                         } else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1061,10 +1068,16 @@ public class italian_practice extends AppCompatActivity {
                 case 2:
                     if (place == correct_moves[1]) {
                         if (field[place] == 2) {
-                            buttons[15].setForeground(null);
-                            buttons[21].setForeground(getDrawable(R.drawable.piece_5));
-                            field[15] = 7;
-                            field[21] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[15].setForeground(null);
+                                    buttons[21].setForeground(getDrawable(R.drawable.piece_5));
+                                    field[15] = 7;
+                                    field[21] = 8;
+                                }
+                            }.start();
                         }else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1100,10 +1113,16 @@ public class italian_practice extends AppCompatActivity {
                 case 3:
                     if (place == correct_moves[2]) {
                         if (field[place] == 3) {
-                            buttons[47].setForeground(null);
-                            buttons[20].setForeground(getDrawable(R.drawable.piece_8));
-                            field[47] = 7;
-                            field[19] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[47].setForeground(null);
+                                    buttons[20].setForeground(getDrawable(R.drawable.piece_8));
+                                    field[47] = 7;
+                                    field[19] = 8;
+                                }
+                            }.start();
                         } else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1135,10 +1154,16 @@ public class italian_practice extends AppCompatActivity {
                 case 4:
                     if (place == correct_moves[3]) {
                         if (field[place] == 1) {
-                            buttons[55].setForeground(null);
-                            buttons[45].setForeground(getDrawable(R.drawable.piece_5));
-                            field[55] = 7;
-                            field[45] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[55].setForeground(null);
+                                    buttons[45].setForeground(getDrawable(R.drawable.piece_5));
+                                    field[55] = 7;
+                                    field[45] = 8;
+                                }
+                            }.start();
                         }else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1174,10 +1199,16 @@ public class italian_practice extends AppCompatActivity {
                 case 5:
                     if (place == correct_moves[4]) {
                         if (field[place] == 1) {
-                            buttons[30].setForeground(null);
-                            buttons[29].setForeground(getDrawable(R.drawable.piece_1));
-                            field[30] = 7;
-                            field[29] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[30].setForeground(null);
+                                    buttons[29].setForeground(getDrawable(R.drawable.piece_1));
+                                    field[30] = 7;
+                                    field[29] = 8;
+                                }
+                            }.start();
                         } else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1213,14 +1244,20 @@ public class italian_practice extends AppCompatActivity {
                 case 6:
                     if (place == correct_moves[5]) {
                         if (field[place] == 6) {
-                            buttons[39].setForeground(null);
-                            buttons[55].setForeground(getDrawable(R.drawable.piece_12));
-                            buttons[63].setForeground(null);
-                            buttons[47].setForeground(getDrawable(R.drawable.piece_3));
-                            field[39] = 7;
-                            field[55] = 8;
-                            field[63] = 7;
-                            field[47] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[39].setForeground(null);
+                                    buttons[55].setForeground(getDrawable(R.drawable.piece_12));
+                                    buttons[63].setForeground(null);
+                                    buttons[47].setForeground(getDrawable(R.drawable.piece_3));
+                                    field[39] = 7;
+                                    field[55] = 8;
+                                    field[63] = 7;
+                                    field[47] = 8;
+                                }
+                            }.start();
                         }else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1256,15 +1293,27 @@ public class italian_practice extends AppCompatActivity {
                 case 7:
                     if (place == correct_moves[6] || place == correct_moves[26]) {
                         if (field[place] == 2) {
-                            buttons[6].setForeground(null);
-                            buttons[4].setForeground(getDrawable(R.drawable.piece_1));
-                            field[6] = 7;
-                            field[4] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[6].setForeground(null);
+                                    buttons[4].setForeground(getDrawable(R.drawable.piece_1));
+                                    field[6] = 7;
+                                    field[4] = 8;
+                                }
+                            }.start();
                         } else if (field[place] == 3) {
-                            buttons[62].setForeground(null);
-                            buttons[61].setForeground(getDrawable(R.drawable.piece_1));
-                            field[62] = 7;
-                            field[61] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[62].setForeground(null);
+                                    buttons[61].setForeground(getDrawable(R.drawable.piece_1));
+                                    field[62] = 7;
+                                    field[61] = 8;
+                                }
+                            }.start();
                         }
                     } else {
                         undoforall(place);
@@ -1275,10 +1324,24 @@ public class italian_practice extends AppCompatActivity {
                 case 8:
                     if (place == correct_moves[7]) {
                         if (field[place] == 1) {
-                            buttons[23].setForeground(null);
-                            buttons[37].setForeground(getDrawable(R.drawable.piece_8));
-                            field[23] = 7;
-                            field[37] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[23].setForeground(null);
+                                    buttons[37].setForeground(getDrawable(R.drawable.piece_8));
+                                    field[23] = 7;
+                                    field[37] = 8;
+                                }
+                            }.start();
+
+                            CountDownTimer countDownTimer1 = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    alertDialog_3();
+                                }
+                            }.start();
                         } else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1314,10 +1377,16 @@ public class italian_practice extends AppCompatActivity {
                 case 9:
                     if (place == correct_moves[8]) {
                         if (field[place] == 3) {
-                            buttons[31].setForeground(null);
-                            buttons[23].setForeground(getDrawable(R.drawable.piece_9));
-                            field[31] = 7;
-                            field[23] = 8;
+                            CountDownTimer countDownTimer = new CountDownTimer(1000, 1000) {
+                                public void onTick(long millisUntilFinished) {
+                                }
+                                public void onFinish() {
+                                    buttons[31].setForeground(null);
+                                    buttons[23].setForeground(getDrawable(R.drawable.piece_9));
+                                    field[31] = 7;
+                                    field[23] = 8;
+                                }
+                            }.start();
                         } else if(field[place] == 2) {
                             field[knight_move] = 2;
                             field[place] = 7;
@@ -1598,11 +1667,28 @@ public class italian_practice extends AppCompatActivity {
         dialog.setMessage("Here you can use interactive board to test your knowledge of opening\n\n" +
                 "If your move is not correct, you will have a chance to try again, so don't worry!");
         dialog.setTitle("Practice: Italian Opening");
+        dialog.setPositiveButton("PRACTICE",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        Toast.makeText(getApplicationContext(),"LET'S GO!!!",Toast.LENGTH_LONG).show();
+                    }
+                });
+        AlertDialog alertDialog = dialog.create();
+        alertDialog.show();
+    }
+
+    private void alertDialog_3() {
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setMessage("You have done a great job!!\n\n" +
+                "Italian Opening Practice is completed.\n\n" +
+                "Now you can learn and practice more openings!");
+        dialog.setTitle("Practice: Italian Opening");
         dialog.setPositiveButton("OK",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,
                                         int which) {
-                        Toast.makeText(getApplicationContext(),"Try again!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"GREAT JOB!!!",Toast.LENGTH_LONG).show();
                     }
                 });
         AlertDialog alertDialog = dialog.create();
